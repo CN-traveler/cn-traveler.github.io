@@ -28,7 +28,7 @@
 <meta property="og:description" content="学习目标  熟悉C语言程序编译和运行  学会编程计算并输出常见的算术表达式的结果  掌握整数和浮点数的含义和输出方法  掌握数学函数的使用方法  初步了解变量的含义  掌握整数和浮点数变量的声明方法  掌握整数和浮点数变量的读入方法  掌握变量交换的三变量法  理解算法竞赛中的程序三步曲：输入、计算、输出  记住算法竞赛的目标及其对程序的要求  计算机速度快，很适合做计算和逻辑判断工作。本章首先介">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-12-31T16:03:04.000Z">
-<meta property="article:modified_time" content="2021-04-02T11:53:21.170Z">
+<meta property="article:modified_time" content="2021-04-03T01:19:57.982Z">
 <meta property="article:author" content="旅人">
 <meta name="twitter:card" content="summary">
 
@@ -122,7 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">算术表达式</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">学习目标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%9C%AF%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">算术表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%8F%8A%E5%85%B6%E8%BE%93%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">变量及其输入</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -138,20 +138,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -245,7 +245,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-02 19:53:21" itemprop="dateModified" datetime="2021-04-02T19:53:21+08:00">2021-04-02</time>
+        <time title="修改时间：2021-04-03 09:19:57" itemprop="dateModified" datetime="2021-04-03T09:19:57+08:00">2021-04-03</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -285,41 +285,60 @@
 </ul>
 <p>计算机速度快，很适合做计算和逻辑判断工作。本章首先介绍顺序结构程序设计，其基本思路是：把需要计算机完成的工作分成若干个步骤，然后依次让计算机执行。请注意这里的“依次”二字——步骤之间是由先后顺序的。这部分的重点在于计算。</p>
 <p>接下来介绍分支结构程序设计，用到了逻辑判断，根据不同情况执行不同语句。本章内容不复杂，但是不容忽视。  </p>
-<p class="tips">注意：<span>编程不是看会的，也不是听会的，而是练会的，所以应尽量在计算机旁阅览本书，以便把书中的程序输入到计算机中进行调试，顺便再做做上机练习。千万不要图快——如果没有足够的时间用来实践，那么学得快，忘得也快。</span></p>
+<p><strong>注意：</strong><span>编程不是看会的，也不是听会的，<strong>而是练会的</strong>，所以应尽量在计算机旁阅览本书，以便把书中的程序输入到计算机中进行调试，顺便再做做上机练习。千万不要图快——如果没有足够的时间用来实践，那么学得快，忘得也快。</span></p>
+<span id="more"></span>
 
 <h1 id="算术表达式"><a href="#算术表达式" class="headerlink" title="算术表达式"></a>算术表达式</h1><p>计算机的“本职”工作就是计算，因此下面先从算术运算入手，看看如何用计算机进行复杂计算。</p>
 <ul>
-<li><p class="tips">程序 1-1<span>计算并输出 1+2 的值</span></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">1</span>+<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-这是一段简单的程序，用来计算 1+2 的值，并把结果输出到屏幕。如果不知道如何编译并运行这段程序，可阅读[附录A](../../附录A/开发环境与方法/)或向指导老师求助。</li>
+<li><strong>程序1-1</strong><span>计算并输出 1+2 的值</span><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">1</span>+<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>即使读者不明白上述除了”1+2”之外的其它代码，仍可以进行以下探索——试着把”1+2”改成其它内容，而不要修改那些并不明白的代码（它们看上去工作情况良好）：</p>
+<p>这是一段简单的程序，用来计算 <code>1+2</code> 的值，并把结果输出到屏幕。如果不知道如何编译并运行这段程序，可阅读<a href="../../%E9%99%84%E5%BD%95A/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E6%96%B9%E6%B3%95/">附录A</a>或向指导老师求助。</p>
+<p>即使读者不明白上述除了 <code>1+2</code> 之外的其它代码，仍可以进行以下探索——试着把 <code>1+2</code> 改成其它内容，而不要修改那些并不明白的代码（它们看上去工作情况良好）：</p>
 <ul>
-<li>修改程序1-1，输出 3-4 的结果<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">3</span><span class="number">-4</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>修改程序1-1，输出 5×6 的结果<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">5</span>*<span class="number">6</span>);  <span class="comment">//在C与C++中用&quot;*&quot;表示&quot;×&quot;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>修改程序1-1，输出 8÷4 的结果<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">8</span>/<span class="number">4</span>);  <span class="comment">//在C与C++中用&quot;/&quot;表示&quot;÷&quot;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>修改程序1-1，输出 8÷5 的结果<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">8</span>/<span class="number">5</span>);  <span class="comment">//程序运行结果为1，在C语言中&quot;8/5&quot;的含义是得到　8÷5 的结果的整数部分</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-在C语言中得到 8÷5=1.6 的结果。</li>
-<li><p class="tips">程序 1-2<span>计算并输出 8/5 的值，保留小数点后一位</span></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.1f&quot;</span>, <span class="number">8.0</span>/<span class="number">5.0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将 <code>1+2</code> 改为 <code>3-4</code><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">3</span><span class="number">-4</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将 <code>1+2</code> 改为 <code>5×6</code><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">5</span>*<span class="number">6</span>);  <span class="comment">//在C与C++中用 &quot;*&quot; 表示 &quot;×&quot;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将 <code>1+2</code> 改为 <code>8÷4</code><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">8</span>/<span class="number">4</span>);  <span class="comment">//在C与C++中用 &quot;/&quot; 表示 &quot;÷&quot;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将 <code>1+2</code> 改为 <code>8÷5</code><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">8</span>/<span class="number">5</span>);  <span class="comment">//程序运行结果为1，在C语言中 &quot;8/5&quot; 的含义是得到　&quot;8÷5&quot; 的结果的整数部分</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+在C语言中得到 <code>8÷5=1.6</code> 的结果。</li>
+<li><strong>程序1-2</strong><span>计算并输出</span> <code>8÷5</code> <span>的值，保留小数点后一位</span><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.1f&quot;</span>, <span class="number">8.0</span>/<span class="number">5.0</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
+<p><strong>注意：</strong><span><strong>%</strong>后面是一个<strong>.</strong>，然后是数字<strong>1</strong>，最后是小写字母<strong>f</strong>，千万不能输错，包括大小写——<strong>C语言大小写敏感</strong></span>。</p>
+<ul>
+<li>将 “%.1f” 改为 “%.2f”<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.2f&quot;</span>, <span class="number">8.0</span>/<span class="number">5.0</span>);    <span class="comment">//数字表示小数点后保留的位数， &quot;%f&quot; 表示以浮点数格式输出</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将 “8.0/5.0” 改为 “8/5”<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.1f&quot;</span>, <span class="number">8</span>/<span class="number">5</span>);    <span class="comment">//在C与C++中算术表达结果取表达返回值、表达式中的常量中最大的数据类型，然后 &quot;8/5&quot; 返回值为整型，整型以浮点型格式输出</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>将 “%.1f” 改为 “%d”<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, <span class="number">8.0</span>/<span class="number">5.0</span>);  <span class="comment">//浮点型整型以整型格式输出</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意：</strong><span>整型值用<strong>%d</strong>输出，浮点数用<strong>%f</strong>输出</span>。</p>
+<p><strong>注意：</strong><span>整型/整型=<strong>整型</strong>，浮点数/浮点数=<strong>浮点数</strong></span>。</p>
+<p>算术表达式可以和数学表达式一样复杂。</p>
+<ul>
+<li><strong>程序1-3</strong><span>复杂的表达式计算</span><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span>    <span class="comment">//引入数学头文件 math.h</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.8f\n&quot;</span>, <span class="number">1</span>+<span class="number">2</span>*<span class="built_in">sqrt</span>(<span class="number">3</span>)/(<span class="number">5</span><span class="number">-0.1</span>));  <span class="comment">//sqrt 函数用于计算算术平方根</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>该表达式为 $$1 + \frac{2 \sqrt 3}{5 - 0.1}$$</p>
+<h1 id="变量及其输入"><a href="#变量及其输入" class="headerlink" title="变量及其输入"></a>变量及其输入</h1><p>程序1-1中计算 <code>1+2</code> 时数据是事先确定的，为简便的计算两个数的加法，需要先从键盘输入两个数，然后计算除结果并输入到屏幕上。</p>
+<ul>
+<li><strong>程序1-4</strong><span> <code>a+b</code> 问题</span><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b;   <span class="comment">//声明两个整型变量</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;a, &amp;b);  <span class="comment">//从键盘输入两个数，在输入除 %s 外的其他值时必须加 &quot;&amp;&quot; （取地址符）</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a+b);  <span class="comment">//将 &quot;a+b&quot; 的结果输出到屏幕上</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意：</strong> <code>scanf()</code> <span>中的占位符和变量的数据应<strong>一一对应</strong></span>。</p>
 <blockquote>
-<p>本帖参考书目《算法竞赛入门基础（第2版）》刘汝佳·著</p>
+<p><span>本帖参考书目《算法竞赛入门基础（第2版）》刘汝佳·著</span></p>
 </blockquote>
 <style>
-    article p{
+    .post-body > p{
         text-indent: 2em;
     }
-    .tips {
-        font-weight: 900;
+    strong {
         text-indent: 0;
-        color: #ff0000;
+        font-weight: 900;
+        color: #ff0000 !important;
     }
-    .tips span {
-        font-family:'楷体';
+    article p > span {
+        font-weight: 900;
+        font-family: "楷体";
         color: var(--text-color);
     }
 </style>
+
     </div>
 
     
@@ -337,7 +356,7 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E6%95%99%E7%A8%8B/IIS%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" rel="next" title="IIS配置教程">
+                <a href="/%E6%9C%8D%E5%8A%A1%E5%99%A8/IIS%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/" rel="next" title="IIS配置教程">
                   IIS配置教程 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -387,6 +406,39 @@
   
 
 
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 
 
